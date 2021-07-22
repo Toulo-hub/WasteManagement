@@ -27,6 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="Connexion"
+                android:textStyle="bold"
                 android:id="@+id/connexion"
                 android:textSize="16dp"
                 android:clickable="true"/>
@@ -37,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginTop="50dp"
             android:layout_marginBottom="40dp">
 
             <TextView
@@ -46,9 +48,35 @@
                 android:clickable="true"
                 android:drawableLeft="@android:drawable/ic_menu_week"
                 android:onClick="onClick"
-                android:text="Show Timetable"
-                android:textSize="20dp" />
+                android:padding="15dp"
+                android:text=" Show Timetable "
+                android:background="@drawable/background_bouton"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
         </LinearLayout>
+
+
+        <!--Google map view-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="40dp">
+
+            <TextView
+                android:id="@+id/map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:drawableLeft="@android:drawable/ic_menu_mapmode"
+                android:onClick="onClick"
+                android:padding="15dp"
+                android:text=" Google map view "
+                android:background="@drawable/background_bouton"
+                android:textSize="20dp"
+                />
+        </LinearLayout>
+
 
         <!--City-->
         <LinearLayout
@@ -61,11 +89,14 @@
                 android:id="@+id/city"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/background_bouton"
                 android:clickable="true"
-                android:drawableLeft="@android:drawable/ic_menu_mapmode"
+                android:drawableLeft="@android:drawable/ic_menu_mylocation"
                 android:onClick="onClick"
-                android:text="Show the City"
-                android:textSize="20dp" />
+                android:padding="15dp"
+                android:text=" City's graph view "
+                android:textSize="20dp"
+                android:textColor="@color/black"/>
         </LinearLayout>
 
 
