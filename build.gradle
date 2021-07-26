@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
+
+//apply plugin: 'com.google.gms.google-services'  // Google Services plugin
 
 android {
     compileSdkVersion 30
@@ -12,6 +15,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -36,7 +40,18 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.android.support:multidex:1.0.3'
 
     implementation "androidx.recyclerview:recyclerview:1.2.1"
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
+
+    implementation platform('com.google.firebase:firebase-bom:28.3.0') // Import the Firebase BoM
+    implementation 'com.google.firebase:firebase-analytics' // Declare the dependency for the Firebase SDK for Google Analytics
+    // Declare the dependencies for any other desired Firebase products
+    implementation 'com.google.firebase:firebase-auth'
+    //implementation 'com.google.firebase:firebase-messaging'
+    //implementation 'com.google.firebase:firebase-storage'
+    //implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-firestore'
+
 }

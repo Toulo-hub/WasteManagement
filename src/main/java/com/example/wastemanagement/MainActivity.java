@@ -27,22 +27,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent i;
+        Intent intent;
 
         switch (v.getId()) {
             case R.id.connexion:
-                i = new Intent(this, connexionAdmin.class);
-                startActivity(i);
+                intent = new Intent(this, connexionAdmin.class);
+                startActivity(intent);
                 break;
 
             case R.id.timetable:
-                i = new Intent(this, timetable.class);
-                startActivity(i);
+                intent = new Intent(this, timetable.class);
+                startActivity(intent);
                 break;
 
             case R.id.city:
-                i = new Intent(this, mapcity.class);
-                startActivity(i);
+                intent = new Intent(this, mapcity.class);
+                startActivity(intent);
                 break;
         }
     }
