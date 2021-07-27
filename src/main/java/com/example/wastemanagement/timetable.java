@@ -42,7 +42,7 @@ public class timetable extends AppCompatActivity {
 
         // Create a new user
         Map<String, Object> user = new HashMap<>();
-        user.put("nom", "Tchuente"); user.put("prenom", "Frank"); user.put("lieu", "Elig-Edzoa"); user.put("jour", "Vendredi"); user.put("heure", "16h");
+        user.put("nom", "Mpong"); user.put("prenom", "Ghislain"); user.put("lieu", "Pont de la gare"); user.put("jour", "Samedi"); user.put("heure", "7h");
 
         // Add a new document with a generated ID
         db.collection("users")
