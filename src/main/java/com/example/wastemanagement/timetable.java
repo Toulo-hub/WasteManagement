@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -41,7 +42,7 @@ public class timetable extends AppCompatActivity {
 
         // Create a new user
         Map<String, Object> user = new HashMap<>();
-        user.put("nom", "Bouba"); user.put("prenom", "Stéphane"); user.put("lieu", "Shell Anguissa"); user.put("jour", "Mercredi"); user.put("heure", "11h");
+        user.put("nom", "Tchuente"); user.put("prenom", "Frank"); user.put("lieu", "Elig-Edzoa"); user.put("jour", "Vendredi"); user.put("heure", "16h");
 
         // Add a new document with a generated ID
         db.collection("users")
@@ -67,8 +68,10 @@ public class timetable extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d(TAG, document.getId() + " => " + document.getData());
+                            ArrayList <UserModel> users = new ArrayList<>();
+                            for (DocumentSnapshot documentChange : task.getResult().getDocuments()) {
+                                users.add(documentChange.toObject(UserModel.class));
+                                Log.d(TAG, documentChange.getId() + " => " + documentChange.getData());
                             }
                         } else {
                             Log.w(TAG, "Error getting documents.", task.getException());

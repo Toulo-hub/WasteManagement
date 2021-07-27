@@ -1,9 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FBF39C"
     tools:context=".connexionAdmin">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="50dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="Se Connecter"
+            android:textColor="@color/green_2"
+            android:textSize="40sp" />
+
+        <EditText
+            android:id="@+id/PersonEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:drawableLeft="@android:drawable/sym_action_email"
+            android:gravity="center"
+            android:hint="waste@gmail.com"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/PersonPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:hint="Mot de passe"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Veuillez remplir votre adresse e-mail et votre mot de passe"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/inscription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Se Connecter"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:padding="7dp"
+            android:clickable="true"
+            android:background="@drawable/background_bouton"/>
+
+    </LinearLayout>
+
+
+</ScrollView>

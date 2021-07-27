@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:background="#FBEE70"
+    tools:context=".sms">
+
+    <EditText
+        android:id="@+id/txt_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Numéro de téléphone"
+        android:inputType="phone"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/txt_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ecrire le message"
+        android:inputType="textLongMessage"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:gravity="top"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:onClick="btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Envoyer"
+        android:textSize="20sp"
+        android:background="@drawable/background_bouton"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ici vous pouvez envoyer un message; entrez le numéro du destinataire et le contenu du message"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:padding="10dp"/>
+
+</LinearLayout>

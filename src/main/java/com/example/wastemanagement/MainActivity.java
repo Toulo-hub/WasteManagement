@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public TextView connexion, timetable, city; //Les boutons de redirection
+    public TextView connexion, timetable, city, sms; //Les boutons de redirection
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +19,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         connexion = (TextView) findViewById(R.id.connexion);
         timetable = (TextView) findViewById(R.id.timetable);
         city = (TextView) findViewById(R.id.city);
+        sms = (TextView) findViewById(R.id.sms);
 
         connexion.setOnClickListener(this);
         timetable.setOnClickListener(this);
         city.setOnClickListener(this);
+        sms.setOnClickListener(this);
     }
 
     @Override
@@ -42,6 +44,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.city:
                 intent = new Intent(this, mapcity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.sms:
+                intent = new Intent(this, sms.class);
                 startActivity(intent);
                 break;
         }

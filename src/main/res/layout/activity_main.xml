@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/camion3a"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -38,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="40dp">
 
             <TextView
@@ -52,7 +53,7 @@
                 android:text=" Show Timetable "
                 android:background="@drawable/background_bouton"
                 android:textSize="20dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
         </LinearLayout>
 
 
@@ -72,6 +73,7 @@
                 android:onClick="onClick"
                 android:padding="15dp"
                 android:text=" Google map view "
+                android:textColor="@color/black"
                 android:background="@drawable/background_bouton"
                 android:textSize="20dp"
                 />
@@ -97,6 +99,27 @@
                 android:text=" City's graph view "
                 android:textSize="20dp"
                 android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <!--SMS Alert-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="40dp">
+
+            <TextView
+                android:id="@+id/sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_bouton"
+                android:clickable="true"
+                android:drawableLeft="@android:drawable/stat_notify_chat"
+                android:onClick="onClick"
+                android:padding="15dp"
+                android:text=" Alert via SMS !!! "
+                android:textColor="@color/black"
+                android:textSize="20dp" />
         </LinearLayout>
 
 

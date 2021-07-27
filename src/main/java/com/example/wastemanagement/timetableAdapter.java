@@ -16,12 +16,22 @@ public class timetableAdapter extends RecyclerView.Adapter<timetableAdapter.Numb
     private Context context;
     private ArrayList nom, prenom, lieu, heure;
 
-    public timetableAdapter(Context context, ArrayList nom, ArrayList prenom, ArrayList lieu, ArrayList heure) {
+    private ArrayList<UserModel> users;
+
+    public timetableAdapter(Context context,
+                            ArrayList nom,
+                            ArrayList prenom,
+                            ArrayList lieu,
+                            ArrayList heure,
+
+                            ArrayList<UserModel> users) {
         this.context = context;
         this.nom = nom;
         this.prenom = prenom;
         this.lieu = lieu;
         this.heure = heure;
+
+        this.users = users;
     }
 
     @NonNull
